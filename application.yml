@@ -1,13 +1,13 @@
 spring:
-  application:
-    name: ConfigServer
-  cloud:
-    config:
-      server:
-        port: 8085
-        git:
-          uri: https://github.com/kpate402/microserviceconfig.git
-          clone-on-start: true
-
-  profiles:
-    default: true
+  datasource:
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
